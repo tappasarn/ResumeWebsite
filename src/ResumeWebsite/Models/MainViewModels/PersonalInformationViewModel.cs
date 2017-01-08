@@ -7,5 +7,6 @@ namespace ResumeWebsite.Models.MainViewModels
         public string FullName {get; set;}
         public int Age{get; set;}
         public string Address{get; set;}
+        public string Focus {get; set;}
     }
 }
