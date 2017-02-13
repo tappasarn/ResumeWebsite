@@ -1,19 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using ResumeWebsite.Models.MainViewModels;
+using ResumeWebsite.Services.Builders;
 
 namespace ResumeWebsite.Controllers
 {
     public class MainController : Controller
     {
         public IActionResult index(){
-            var myInformationViewModel = new PersonalInformationViewModel();
-            myInformationViewModel.FirstName = "Tappasarn";
-            myInformationViewModel.LastName = "Aramboonpong";
-            myInformationViewModel.FullName = myInformationViewModel.FirstName + " " + myInformationViewModel.LastName;
-            myInformationViewModel.Age = 24;
-            myInformationViewModel.Address = "31 Onnut 17 (yak 5) Sukumvit 77 Rd. Suanluang District Bangkok 10250";
+            var mainControllerViewModelBuilder = new MainControllerViewModelBuilder();
+            
+            var mainControllerViewModel = mainControllerViewModelBuilder.Build();
 
-            return View(myInformationViewModel);
+            return View(mainControllerViewModel);
         }
     }
 }

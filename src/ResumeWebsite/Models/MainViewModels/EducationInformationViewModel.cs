@@ -1,9 +1,9 @@
+using ResumeWebsite.Models.MainViewModels.BaseClass;
+
 namespace ResumeWebsite.Models.MainViewModels
 {
-    public class EducationInformationViewModel
+    public class EducationInformationViewModel : OtherInfo
     {
-        public string UniversityName { get; set; }
-        public string DegreeNmae { get; set;}
-        public double CumGPA { get; set; }
+        
     }
 }
