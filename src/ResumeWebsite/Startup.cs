@@ -49,9 +49,7 @@ namespace ResumeWebsite
 
             services.AddMvc();
 
-            // Add application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            services.AddTransient<ISmsSender, AuthMessageSender>();
+            // Add application services (dependency injection)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,16 +58,16 @@ namespace ResumeWebsite
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            //if (env.IsDevelopment())
-            //{
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
-            //}
-            /*else
+            }
+            else
             {
               app.UseExceptionHandler("/Home/Error");
-            }*/
+            }
 
             app.UseStaticFiles();
 

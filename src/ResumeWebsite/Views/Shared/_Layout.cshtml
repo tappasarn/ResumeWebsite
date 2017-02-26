@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ResumeWebsite</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <!--<environment names="Development">
+    <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-    </environment>-->
-    <!--<environment names="Staging,Production">
+    </environment>
+    <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>-->
+    </environment>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">    
 </head>
@@ -34,11 +32,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Main" asp-action="Index">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Main" asp-action="Index">Education</a></li>
-                    <li><a asp-area="" asp-controller="Main" asp-action="Index">Skills</a></li>
-                    <li><a asp-area="" asp-controller="Main" asp-action="Index">Experience</a></li>
-                    <li><a asp-area="" asp-controller="Main" asp-action="Index">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#project">Projects</a></li>
                 </ul>
             </div>
         </div>

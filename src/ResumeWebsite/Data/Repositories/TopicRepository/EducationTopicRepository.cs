@@ -5,6 +5,7 @@ namespace ResumeWebsite.Data.Repositories.TopicRepository
 {
     public class EducationTopicRepository : ITopicRepository
     {
+        private string _id = "education";
         private string _displayIcon = "school";
         private string _topic = "Education Profile";
         public string DisplayIcon
@@ -12,6 +13,14 @@ namespace ResumeWebsite.Data.Repositories.TopicRepository
             get
             {
                 return this._displayIcon;
+            }
+        }
+
+        public string Id
+        {
+            get
+            {
+                return this._id;
             }
         }
 

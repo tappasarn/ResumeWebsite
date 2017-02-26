@@ -23,6 +23,8 @@ namespace ResumeWebsite.Services.Builders.BaseClass
         }
         public IOtherInfo Build()
         {
+            this._otherInfoViewModel.Id = this._topicRepository.Id;
+
             this._otherInfoViewModel.Topic = this._topicRepository.Topic;
             this._otherInfoViewModel.DisplayIcon = this._topicRepository.DisplayIcon;
 

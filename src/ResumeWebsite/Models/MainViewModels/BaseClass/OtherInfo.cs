@@ -5,11 +5,25 @@ namespace ResumeWebsite.Models.MainViewModels.BaseClass
 {
     public class OtherInfo : IOtherInfo
     {
+        protected string _id;
         protected List<string> _header;
         protected List<string> _info;
         protected string _topic;
         protected string _displayIcon;
 
+        public string Id
+        {
+            get
+            {
+                return this._id;
+            }
+
+            set
+            {
+                this._id = value;
+            }
+        }
+        
         public string DisplayIcon
         {
             get
